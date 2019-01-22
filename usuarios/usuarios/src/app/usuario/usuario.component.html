@@ -1,0 +1,40 @@
+<div>
+  <label>Nombre:</label>
+  <input type="text" id="nombre" [(ngModel)]="usuario.nombre">
+</div>
+<div>
+  <label>Apellidos:</label>
+  <input type="text" id="apellidos" [(ngModel)]="usuario.apellidos">
+</div>
+<div>
+  <label>Usuario:</label>
+  <input type="text" id="usuario" [(ngModel)]="usuario.usuario">
+</div>
+<div>
+  <label>Telefono:</label>
+  <input type="text" id="telefono" [(ngModel)]="usuario.telefono">
+</div>
+<div>
+  <label>Edad:</label>
+  <input type="number" step="1" id="edad" [(ngModel)]="usuario.edad">
+</div>
+<button type="button" (click)="guardarUsuario()">Guardar</button>
+
+<div>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Usuario</th>
+      <th>Telefono</th>
+      <th>Edad</th>
+    </tr>
+    <tr *ngFor="let u of usuarios">
+      <td>{{u.nombre}}</td>
+      <td>{{u.apellidos}}</td>
+      <td>{{u.usuario}}</td>
+      <td>{{u.telefono}}</td>
+      <td>{{u.edad}}</td>
+    </tr>
+  </table>
+</div>
