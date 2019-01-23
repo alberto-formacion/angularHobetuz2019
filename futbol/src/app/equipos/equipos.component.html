@@ -1,0 +1,46 @@
+<div>
+  <label>Nombre</label>
+  <input type="text" id="nombre" [(ngModel)]="equipo.nombre">
+</div>
+<div>
+  <label>Ciudad</label>
+  <input type="text" id="ciudad" [(ngModel)]="equipo.ciudad">
+</div>
+<div>
+  <label>Año Fundación</label>
+  <input type="number" id="fundacion" [(ngModel)]="equipo.fundacion">
+</div>
+<div>
+  <label>Socios</label>
+  <input type="number" id="socios" [(ngModel)]="equipo.numSocios">
+</div>
+<div>
+  <label>Peñas</label>
+  <input type="number" id="penas" [(ngModel)]="equipo.numPenas">
+</div>
+<div>
+  <button type="button" (click)="addEquipo()">Guardar</button>
+</div>
+
+<div *ngIf="equipos.length > 0">
+  <ul>
+    <li 
+      *ngFor="let e of equipos"
+      [ngClass]="modificarEstilos(e)"
+      (click)="mostrarInfoEquipo(e)">
+        {{e.nombre}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="equipos.length == 0">
+  <h4>No hay equipos</h4>
+</div>
+
+<div *ngIf="equipoSeleccionado">
+  <p>Nombre:{{equipoSeleccionado.nombre}}</p>
+  <p>Ciudad:{{equipoSeleccionado.ciudad}}</p>
+  <p>Año Fundacion:{{equipoSeleccionado.fundacion}}</p>
+  <p>Socios:{{equipoSeleccionado.numSocios}}</p>
+  <p>Peñas:{{equipoSeleccionado.numPenas}}</p>
+</div>
