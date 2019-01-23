@@ -4,11 +4,15 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
+import { SinTerminarPipe } from './pipes/sin-terminar.pipe';
+import { PriorizarTareasPipe } from './pipes/priorizar-tareas.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TodosComponent
+    TodosComponent,
+    SinTerminarPipe,
+    PriorizarTareasPipe
   ],
   imports: [
     BrowserModule,
