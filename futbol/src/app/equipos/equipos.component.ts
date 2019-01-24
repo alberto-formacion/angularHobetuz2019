@@ -11,6 +11,7 @@ export class EquiposComponent implements OnInit {
   equipo: Equipo;
   equipos: Array<Equipo>;
   equipoSeleccionado: Equipo;
+  equipoBuscar: string;
 
   constructor() {}
 
