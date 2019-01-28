@@ -6,6 +6,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 http://jasonwatmore.com/post/2018/11/07/angular-7-reactive-forms-validation-example
 
+https://scotch.io/tutorials/using-angular-2s-model-driven-forms-with-formgroup-and-formcontrol
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
