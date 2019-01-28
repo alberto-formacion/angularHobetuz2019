@@ -2,8 +2,8 @@ import { Todo } from './../todos/todo';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'sinTerminar',
-  pure: false
+  name: 'sinTerminar'
+  // , pure: false
 })
 export class SinTerminarPipe implements PipeTransform {
   transform(todos: Array<Todo>): Array<Todo> {
