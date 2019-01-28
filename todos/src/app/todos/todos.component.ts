@@ -21,10 +21,18 @@ export class TodosComponent implements OnInit {
 
   addTodo() {
     this.todos.push(this.todo);
+    //this.todos = [...this.todos, this.todo];
     this.todo = new Todo('', false, false);
   }
 
   terminarTarea(todo: Todo): void {
+    /*const todoIndex = this.todos.indexOf(todo);
+    const newTodo = new Todo(todo.nombre, true, todo.importante);
+    this.todos = [
+      ...this.todos.slice(0, todoIndex),
+      newTodo,
+      ...this.todos.slice(todoIndex + 1)
+    ];*/
     todo.terminada = true;
   }
 
