@@ -35,6 +35,8 @@ export class EquiposComponent implements OnInit {
 
   addEquipo(equipo: Equipo) {
     this.equipos = [...this.equipos, equipo];
+
+    this.formularioEquipos.reset();
   }
   modificarEstilos(equipo: Equipo) {
     const clases = {'equipoAntiguo': equipo.fundacion < 1900};
