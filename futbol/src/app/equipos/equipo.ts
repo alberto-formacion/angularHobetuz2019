@@ -4,6 +4,7 @@ export class Equipo {
         public ciudad: string,
         public fundacion: number,
         public numSocios: number,
-        public numPenas: number
+        public numPenas: number,
+        public imagen: string
     ) {}
 }

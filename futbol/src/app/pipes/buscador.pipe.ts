@@ -2,8 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Equipo } from '../equipos/equipo';
 
 @Pipe({
-  name: 'buscador',
-  pure: false
+  name: 'buscador'
 })
 export class BuscadorPipe implements PipeTransform {
 

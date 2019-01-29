@@ -1,28 +1,37 @@
+<form [formGroup]="formularioEquipos" (ngSubmit)="guardarEquipo()" novalidate>
 <div>
   <label>Nombre</label>
-  <input type="text" id="nombre" [(ngModel)]="equipo.nombre">
+  <input type="text" id="nombre" formControlName="nombre">
 </div>
 <div>
   <label>Ciudad</label>
-  <input type="text" id="ciudad" [(ngModel)]="equipo.ciudad">
+  <input type="text" id="ciudad" formControlName="ciudad">
 </div>
 <div>
   <label>Año Fundación</label>
-  <input type="number" id="fundacion" [(ngModel)]="equipo.fundacion">
+  <input type="number" id="fundacion" formControlName="fundacion">
 </div>
 <div>
   <label>Socios</label>
-  <input type="number" id="socios" [(ngModel)]="equipo.numSocios">
+  <input type="number" id="socios" formControlName="socios">
 </div>
 <div>
   <label>Peñas</label>
-  <input type="number" id="penas" [(ngModel)]="equipo.numPenas">
+  <input type="number" id="penas" formControlName="penas">
 </div>
 <div>
-  <button type="button" (click)="addEquipo()">Guardar</button>
+  <label>Imagen</label>
+  <input type="text" id="imagen" formControlName="imagen">
 </div>
+<div>
+  <img height="32px" [src]="formularioEquipos.controls.imagen.value">
+</div>
+<div>
+  <button [disabled]="formularioEquipos.invalid" type="submit">Guardar</button>
+</div>
+</form>
 
-<div>
+<div *ngIf="equipos.length > 0">
   <label>Buscar Equipo </label>
   <input [(ngModel)]="equipoBuscar">
 </div>
@@ -33,7 +42,7 @@
       *ngFor="let e of equipos | buscador: equipoBuscar"
       [ngClass]="modificarEstilos(e)"
       (click)="mostrarInfoEquipo(e)">
-        {{e.nombre}}
+        <img src="{{e.imagen}}" height="16px"> {{e.nombre}}
     </li>
   </ul>
 </div>
