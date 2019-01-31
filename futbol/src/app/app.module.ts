@@ -5,12 +5,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EquiposComponent } from './equipos/equipos.component';
 import { BuscadorPipe } from './pipes/buscador.pipe';
+import { DetalleEquipoComponent } from './detalle-equipo/detalle-equipo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EquiposComponent,
-    BuscadorPipe
+    BuscadorPipe,
+    DetalleEquipoComponent
   ],
   imports: [
     BrowserModule,

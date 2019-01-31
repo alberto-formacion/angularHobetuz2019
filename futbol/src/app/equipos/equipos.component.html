@@ -51,10 +51,4 @@
   <h4>No hay equipos</h4>
 </div>
 
-<div *ngIf="equipoSeleccionado">
-  <p>Nombre:{{equipoSeleccionado.nombre}}</p>
-  <p>Ciudad:{{equipoSeleccionado.ciudad}}</p>
-  <p>Año Fundacion:{{equipoSeleccionado.fundacion}}</p>
-  <p>Socios:{{equipoSeleccionado.numSocios}}</p>
-  <p>Peñas:{{equipoSeleccionado.numPenas}}</p>
-</div>
+<app-detalle-equipo [equipo]="equipoSeleccionado" ></app-detalle-equipo>
