@@ -1,0 +1,19 @@
+<div *ngIf="equipos.length > 0">
+  <label>Buscar Equipo </label>
+  <input [(ngModel)]="equipoBuscar">
+</div>
+
+<div *ngIf="equipos.length > 0">
+  <ul>
+    <li 
+      *ngFor="let e of equipos | buscador: equipoBuscar"
+      [ngClass]="modificarEstilos(e)"
+      (click)="mostrarInfoEquipo(e)">
+        <img src="{{e.imagen}}" height="16px"> {{e.nombre}}
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="equipos.length == 0">
+  <h4>No hay equipos</h4>
+</div>

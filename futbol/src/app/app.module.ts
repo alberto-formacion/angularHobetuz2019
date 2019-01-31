@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { EquiposComponent } from './equipos/equipos.component';
 import { BuscadorPipe } from './pipes/buscador.pipe';
 import { DetalleEquipoComponent } from './detalle-equipo/detalle-equipo.component';
+import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EquiposComponent,
     BuscadorPipe,
-    DetalleEquipoComponent
+    DetalleEquipoComponent,
+    ListaEquipoComponent
   ],
   imports: [
     BrowserModule,

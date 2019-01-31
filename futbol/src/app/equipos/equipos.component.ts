@@ -38,15 +38,6 @@ export class EquiposComponent implements OnInit {
 
     this.formularioEquipos.reset();
   }
-  modificarEstilos(equipo: Equipo) {
-    const clases = {'equipoAntiguo': equipo.fundacion < 1900};
-
-    return clases;
-  }
-
-  mostrarInfoEquipo(equipo: Equipo) {
-    this.equipoSeleccionado = equipo;
-  }
 
   guardarEquipo() {
     const equipo = new Equipo(
@@ -59,5 +50,9 @@ export class EquiposComponent implements OnInit {
     );
 
     this.addEquipo(equipo);
+  }
+
+  recogerEquipo(equipo: Equipo) {
+    this.equipoSeleccionado = equipo;
   }
 }
