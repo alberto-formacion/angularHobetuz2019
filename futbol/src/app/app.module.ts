@@ -7,6 +7,9 @@ import { EquiposComponent } from './equipos/equipos.component';
 import { BuscadorPipe } from './pipes/buscador.pipe';
 import { DetalleEquipoComponent } from './detalle-equipo/detalle-equipo.component';
 import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
+import { ListaJugadorComponent } from './lista-jugador/lista-jugador.component';
+import { DetalleJugadorComponent } from './detalle-jugador/detalle-jugador.component';
+import { JugadoresComponent } from './jugadores/jugadores.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
     EquiposComponent,
     BuscadorPipe,
     DetalleEquipoComponent,
-    ListaEquipoComponent
+    ListaEquipoComponent,
+    ListaJugadorComponent,
+    DetalleJugadorComponent,
+    JugadoresComponent
   ],
   imports: [
     BrowserModule,
