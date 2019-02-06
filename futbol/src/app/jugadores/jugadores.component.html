@@ -1,2 +1,3 @@
-<app-lista-jugador></app-lista-jugador>
+<app-lista-equipo (evtEmitter)="recogerEquipo($event)"></app-lista-equipo>
+<app-lista-jugador [jugadores]="jugadores" ></app-lista-jugador>
 <app-detalle-jugador></app-detalle-jugador>

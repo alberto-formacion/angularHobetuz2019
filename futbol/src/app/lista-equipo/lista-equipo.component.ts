@@ -1,3 +1,4 @@
+import { EquipoService } from './../services/equipo.service';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Equipo } from '../equipos/equipo';
 
@@ -8,12 +9,13 @@ import { Equipo } from '../equipos/equipo';
 })
 export class ListaEquipoComponent implements OnInit {
 
-  @Input() equipos: Array<Equipo>;
+  equipos: Array<Equipo>;
   @Output() evtEmitter: EventEmitter<Equipo> = new EventEmitter<Equipo>();
 
-  constructor() { }
+  constructor(private equipoService: EquipoService) { }
 
   ngOnInit() {
+    this.equipos = this.equipoService.getEquipos();
   }
 
   modificarEstilos(equipo: Equipo) {

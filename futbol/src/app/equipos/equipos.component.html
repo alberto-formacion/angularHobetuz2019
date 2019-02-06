@@ -31,6 +31,6 @@
 </div>
 </form>
 
-<app-lista-equipo [equipos]="equipos" (evtEmitter)="recogerEquipo($event)"></app-lista-equipo>
+<app-lista-equipo (evtEmitter)="recogerEquipo($event)"></app-lista-equipo>
 
 <app-detalle-equipo [equipo]="equipoSeleccionado" ></app-detalle-equipo>

@@ -1,3 +1,3 @@
-<p>
-  lista-jugador works!
-</p>
+<ul *ngIf="jugadores">
+  <li *ngFor="let jugador of jugadores">{{jugador.nombre}} {{jugador.apellidos}}</li>
+</ul>

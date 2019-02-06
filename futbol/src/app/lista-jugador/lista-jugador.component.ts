@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Jugador } from './../jugadores/jugador';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-lista-jugador',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lista-jugador.component.css']
 })
 export class ListaJugadorComponent implements OnInit {
+
+  @Input() jugadores: Array<Jugador>;
 
   constructor() { }
 
