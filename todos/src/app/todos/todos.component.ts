@@ -15,19 +15,28 @@ export class TodosComponent implements OnInit {
   constructor(private todoService: TodoService) {}
 
   ngOnInit() {
-    this.todos = this.todoService.getTodos();
-    this.todo = new Todo('', false, false);
+    this.todos = [];
+    this.todoService.getTodos().subscribe(
+      todos => this.todos = todos,
+      err => console.log(err)
+    );
+    this.todo = new Todo(0, '', false, false);
   }
 
   addTodo() {
-    // this.todos.push(this.todo);
-    this.todos = this.todoService.addTodo(this.todo);
-    this.todo = new Todo('', false, false);
+    this.todoService.addTodo(this.todo).subscribe(
+      todos => this.todos = todos,
+      err => console.log(err)
+    );
+    this.todo = new Todo(0, '', false, false);
   }
 
   terminarTarea(todo: Todo): void {
-    this.todos = this.todoService.deleteTodo(todo);
-    // todo.terminada = true;
+    todo.terminada = true;
+    this.todoService.deleteTodo(todo).subscribe(
+      todos => this.todos = todos,
+      err => console.log(err)
+    );
   }
 
   modificarEstilos(todo: Todo) {

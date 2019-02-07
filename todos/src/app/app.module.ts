@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TodosComponent } from './todos/todos.component';
 import { SinTerminarPipe } from './pipes/sin-terminar.pipe';
 import { PriorizarTareasPipe } from './pipes/priorizar-tareas.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { PriorizarTareasPipe } from './pipes/priorizar-tareas.pipe';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [TodoService],
   bootstrap: [AppComponent]
