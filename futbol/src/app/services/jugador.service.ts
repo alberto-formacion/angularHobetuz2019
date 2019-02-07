@@ -12,8 +12,11 @@ export class JugadorService {
   constructor() {
     this.jugadores = [
       new Jugador('Julen', 'Guerrero', 'Centrocampista', 25, 8, 'Athletic Club'),
+      new Jugador('Jose Ángel', 'Iribar', 'Centrocampista', 30, 1, 'Athletic Club'),
       new Jugador('Lionel', 'Messi', 'Delantero', 31, 10, 'Futbol Club Barcelona'),
-      new Jugador('Claude', 'Makelele', 'Centrocampista', 28, 6, 'Celta de Vigo')
+      new Jugador('Xavi', 'Hernandez', 'Centrocampista', 34, 6, 'Futbol Club Barcelona'),
+      new Jugador('Claude', 'Makelele', 'Centrocampista', 28, 6, 'Celta de Vigo'),
+      new Jugador('Alexander', 'Mostovoi', 'Centrocampista', 30, 10, 'Celta de Vigo')
     ];
   }
 

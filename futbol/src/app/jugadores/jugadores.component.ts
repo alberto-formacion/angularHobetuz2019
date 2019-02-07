@@ -11,6 +11,7 @@ import { Jugador } from '../jugadores/jugador';
 export class JugadoresComponent implements OnInit {
 
   jugadores: Array<Jugador>;
+  jugadorSeleccionado: Jugador;
 
   constructor(private jugadorService: JugadorService) { }
 
@@ -19,6 +20,10 @@ export class JugadoresComponent implements OnInit {
 
   recogerEquipo(equipo: Equipo) {
     this.jugadores = this.jugadorService.getJugadoresByEquipo(equipo);
+  }
+
+  recogerJugador(jugador: Jugador) {
+    this.jugadorSeleccionado = jugador;
   }
 
 }

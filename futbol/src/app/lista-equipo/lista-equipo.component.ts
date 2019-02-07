@@ -19,7 +19,7 @@ export class ListaEquipoComponent implements OnInit {
   }
 
   modificarEstilos(equipo: Equipo) {
-    const clases = {'equipoAntiguo': equipo.fundacion < 1900};
+    const clases = {'list-group-item-warning': equipo.fundacion < 1900};
 
     return clases;
   }

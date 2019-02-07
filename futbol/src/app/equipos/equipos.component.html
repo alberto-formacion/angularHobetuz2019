@@ -1,36 +1,47 @@
-<form [formGroup]="formularioEquipos" (ngSubmit)="guardarEquipo()" novalidate>
-<div>
-  <label>Nombre</label>
-  <input type="text" id="nombre" formControlName="nombre">
+<div class="row mt-5">
+  <form class="col-sm-12 mt-3" [formGroup]="formularioEquipos" (ngSubmit)="guardarEquipo()" novalidate>
+    <div class="form-row">
+      <div class="form-group col-sm-6">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" formControlName="nombre">
+      </div>
+      <div class="form-group col-sm-6">
+        <label for="ciudad">Ciudad</label>
+        <input type="text" class="form-control" id="ciudad" formControlName="ciudad">
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-sm-4">
+        <label for="fundacion">Año Fundación</label>
+        <input type="number" class="form-control" id="fundacion" formControlName="fundacion">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="socios">Socios</label>
+        <input type="number" class="form-control" id="socios" formControlName="socios">
+      </div>
+      <div class="form-group col-sm-4">
+        <label for="penas">Peñas</label>
+        <input type="number" class="form-control" id="penas" formControlName="penas">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="imagen">Imagen</label>
+      <input type="text" class="form-control" id="imagen" formControlName="imagen">
+    </div>
+    <div>
+      <img height="32px" [src]="formularioEquipos.controls.imagen.value">
+    </div>
+    <div class="mt-3">
+      <button class="btn btn-primary" [disabled]="formularioEquipos.invalid" type="submit">Guardar</button>
+    </div>
+  </form>
 </div>
-<div>
-  <label>Ciudad</label>
-  <input type="text" id="ciudad" formControlName="ciudad">
+<hr/>
+<div class="row">
+  <div class="col-sm-4">
+    <app-lista-equipo (evtEmitter)="recogerEquipo($event)"></app-lista-equipo>
+  </div>
+  <div class="col-sm-8">
+    <app-detalle-equipo [equipo]="equipoSeleccionado" ></app-detalle-equipo>
+  </div>
 </div>
-<div>
-  <label>Año Fundación</label>
-  <input type="number" id="fundacion" formControlName="fundacion">
-</div>
-<div>
-  <label>Socios</label>
-  <input type="number" id="socios" formControlName="socios">
-</div>
-<div>
-  <label>Peñas</label>
-  <input type="number" id="penas" formControlName="penas">
-</div>
-<div>
-  <label>Imagen</label>
-  <input type="text" id="imagen" formControlName="imagen">
-</div>
-<div>
-  <img height="32px" [src]="formularioEquipos.controls.imagen.value">
-</div>
-<div>
-  <button [disabled]="formularioEquipos.invalid" type="submit">Guardar</button>
-</div>
-</form>
-
-<app-lista-equipo (evtEmitter)="recogerEquipo($event)"></app-lista-equipo>
-
-<app-detalle-equipo [equipo]="equipoSeleccionado" ></app-detalle-equipo>

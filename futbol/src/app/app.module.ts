@@ -11,6 +11,7 @@ import { ListaEquipoComponent } from './lista-equipo/lista-equipo.component';
 import { ListaJugadorComponent } from './lista-jugador/lista-jugador.component';
 import { DetalleJugadorComponent } from './detalle-jugador/detalle-jugador.component';
 import { JugadoresComponent } from './jugadores/jugadores.component';
+import { BuscadorJugadorPipe } from './pipes/buscador-jugador.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { JugadoresComponent } from './jugadores/jugadores.component';
     ListaEquipoComponent,
     ListaJugadorComponent,
     DetalleJugadorComponent,
-    JugadoresComponent
+    JugadoresComponent,
+    BuscadorJugadorPipe
   ],
   imports: [
     BrowserModule,

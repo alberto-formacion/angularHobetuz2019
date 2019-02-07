@@ -1,11 +1,12 @@
-<div *ngIf="equipos.length > 0">
-  <label>Buscar Equipo </label>
-  <input [(ngModel)]="equipoBuscar">
+<div class="mb-3" *ngIf="equipos.length > 0">
+  <label for="buscador">Buscar Equipo </label>
+  <input type="text" class="form-control" id="buscador" [(ngModel)]="equipoBuscar">
 </div>
 
 <div *ngIf="equipos.length > 0">
-  <ul>
-    <li 
+  <ul class="list-group">
+    <li
+      class="list-group-item"
       *ngFor="let e of equipos | buscador: equipoBuscar"
       [ngClass]="modificarEstilos(e)"
       (click)="mostrarInfoEquipo(e)">
