@@ -48,6 +48,46 @@
 <div class="container-fluid">
   <div class="jumbotron">
     <h3>Directivas</h3>
-    <p></p>
+    <p class="lead">Las directivas son una forma rápida de modificar nuestro HTML, y tenemos 3 tipos:</p>
+    <ol>
+      <li>Componentes</li>
+      <li>Directivas Estructurales</li>
+      <li>Directivas de Atributo</li>
+    </ol>
+
+    <h5>Componentes</h5>
+    <p>Un Componente es un caso concreto de directiva que siempre va asociado a un template y al que por ser un elemento tan importante en Angular 2 se le ha dado un decorador propio <code>@Component</code></p>
+
+    <h5>Directivas Estructurales</h5>
+    <p>Estas directivas, siempre van precedidas por un asterisco, alteran el layout añadiendo, eliminando o reemplazando elementos en el DOM.</p>
+    <ul>
+      <li>
+        <a href="https://angular.io/api/common/NgForOf" target="_blank">*ngFor</a>
+        <ul>
+          <li><code ngNonBindable>&lt;li *ngFor="let item of list"&gt;{{item}}&lt;/li&gt;</code></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://angular.io/api/common/NgIf" target="_blank">*ngIf</a>
+        <ul>
+            <li><code ngNonBindable>&lt;div *ngIf="expression"&gt;Contenido&lt;/div&gt;</code></li>
+          </ul>        
+      </li>
+    </ul>
+
+    <h5>Directivas de Atributo</h5>
+    <p>Alteran la apariencia o el comportamiento de un elemento existente en el DOM y su apariencia es igual a la de atributos HTML.</p>
+    <ul>
+      <li><a href="https://angular.io/api/forms/NgModel" target="_blank">ngModel</a></li>
+      <li><a href="https://angular.io/api/common/NgClass" target="_blank">ngClass</a></li>
+      <li><a href="https://angular.io/api/common/NgStyle" target="_blank">ngStyle</a></li>
+    </ul>
+
   </div>
 </div>
+
+<div class="container-fluid">
+    <div class="jumbotron">
+      <h3>Directivas Personalizas</h3>
+    </div>
+  </div>
