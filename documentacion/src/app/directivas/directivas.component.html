@@ -78,9 +78,24 @@
     <h5>Directivas de Atributo</h5>
     <p>Alteran la apariencia o el comportamiento de un elemento existente en el DOM y su apariencia es igual a la de atributos HTML.</p>
     <ul>
-      <li><a href="https://angular.io/api/forms/NgModel" target="_blank">ngModel</a></li>
-      <li><a href="https://angular.io/api/common/NgClass" target="_blank">ngClass</a></li>
-      <li><a href="https://angular.io/api/common/NgStyle" target="_blank">ngStyle</a></li>
+      <li>
+        <a href="https://angular.io/api/forms/NgModel" target="_blank">ngModel</a>
+        <ul>
+          <li><code ngNonBindable>&lt;input type="text" [(ngModel)]="valorBidireccional"&gt;</code></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://angular.io/api/common/NgClass" target="_blank">ngClass</a>
+        <ul>
+          <li><code ngNonBindable>&lt;div [ngClass]="setClasses()"&gt;Texto&lt;/div&gt;</code></li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://angular.io/api/common/NgStyle" target="_blank">ngStyle</a>
+        <ul>
+          <li><code ngNonBindable>&lt;div [ngStyle]="setStyles()"&gt;Texto&lt;/div&gt;</code></li>
+        </ul>
+      </li>
     </ul>
 
   </div>
