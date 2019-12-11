@@ -7,17 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivasComponent implements OnInit {
 
-  valorParaMostrar: string = 'Este valor se declara en el Componente';
-  valorDePropiedad: boolean = true;
-  valorBidireccional: string = 'Valor inicial desde el componente'
+  valorParaMostrar: string;
+  valorDePropiedad: boolean;
+  valorBidireccional: string;
 
   constructor() { }
 
   ngOnInit() {
+    this.valorParaMostrar = 'Este valor se declara en el Componente';
+    this.valorDePropiedad = true;
+    this.valorBidireccional = 'Valor inicial desde el componente';
   }
 
-  accionEnComponente(){
-    alert("accion desde el template al componente");
+  accionEnComponente(e) {
+    console.log(e);
+    alert('accion desde el template al componente');
   }
 
 }

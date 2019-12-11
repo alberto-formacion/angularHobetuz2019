@@ -28,6 +28,7 @@ public class TodoServiceImpl implements TodoService {
 
 	@Override
 	public List<Todo> finalizeTodo(Todo todo) {
+		todo.setTerminada(!todo.isTerminada());
 		todoRepository.save(todo);
 		return todoRepository.findAll();
 	}

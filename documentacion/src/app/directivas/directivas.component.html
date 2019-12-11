@@ -33,7 +33,7 @@
         El evento se pone entre parentesis y el valor es el codigo a ejecutar cuando
         <code ngNonBindable>&lt;button (click)="accionEnComponente()"&gt;Botón&lt;/button&gt;</code>
       </li>
-      <li><button class="btn btn-primary" (click)="accionEnComponente()">Botón</button></li>
+      <li><button class="btn btn-primary" (click)="accionEnComponente($event)">Botón</button></li>
     </ul>
     <h5>Two-way binding</h5>
     <p>Se utiliza para mantener actualizado un valor en template y en el componente a la vez, si el valor cambia en el template cambia a la vez en el componente y viceversa.</p>
@@ -58,7 +58,7 @@
     <h5>Componentes</h5>
     <p>Un Componente es un caso concreto de directiva que siempre va asociado a un template y al que por ser un elemento tan importante en Angular 2 se le ha dado un decorador propio <code>@Component</code></p>
 
-    <h5>Directivas Estructurales</h5>
+    <h5><a href="https://angular.io/guide/structural-directives">Directivas Estructurales</a></h5>
     <p>Estas directivas, siempre van precedidas por un asterisco, alteran el layout añadiendo, eliminando o reemplazando elementos en el DOM.</p>
     <ul>
       <li>
@@ -102,7 +102,7 @@
 </div>
 
 <div class="container-fluid">
-    <div class="jumbotron">
-      <h3>Directivas Personalizas</h3>
-    </div>
+  <div class="jumbotron">
+    <h3>Directivas Personalizas</h3>
   </div>
+</div>
